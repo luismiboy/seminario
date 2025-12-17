@@ -1,0 +1,64 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{background:#111218;color:#eef2f7}
+
+header{background:#1c2631;text-align:center;padding:20px;border-bottom:3px solid #ffa726}
+.sub{color:#c7d7e9}
+
+.nav{text-align:center;padding:12px;background:#10151a}
+.nav a{color:#ffdca3;margin:0 10px;text-decoration:none;padding:6px 10px;border-radius:6px}
+.nav a:hover{background:#ffdca31a}
+
+.main{width:90%;margin:20px auto;display:grid;gap:20px}
+
+.practica{background:#14171b;padding:20px;border-left:4px solid #ffa726;border-radius:10px}
+
+.img-simple,.img-dem{width:100%;border-radius:8px;margin-top:10px}
+
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th{background:#ffa726;color:#000}
+th,td{border:1px solid #333;padding:10px}
+
+input,textarea{background:#1f2a30;border:none;padding:10px;border-radius:5px;color:white}
+button{padding:10px 14px;background:#ffa726;font-weight:bold;border:none;border-radius:6px;cursor:pointer}
+button:hover{background:#ffb75e}
+
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.card{overflow:hidden;border-radius:10px}
+.card img{width:100%;transition:.4s}
+.card:hover img{transform:scale(1.2)}
+
+.btn-hv{background:#3498db;color:#fff}
+.btn-hv:hover{background:#5dade2;transform:scale(1.05)}
+
+.cielo{width:100%;height:200px;background:black url("https://i.imgur.com/qs7N4m2.png");position:relative;overflow:hidden}
+.luna{width:80px;height:80px;background:#f9f9f9;border-radius:50%;position:absolute;top:60px;left:-90px;animation:moverLuna 8s linear infinite}
+@keyframes moverLuna{from{left:-100px}to{left:110%}}
+
+.reloj{font-size:28px;font-weight:bold;letter-spacing:3px}
+
+.btn-sec{display:inline-block;padding:10px 14px;margin:8px;background:#ffa726;color:black;border-radius:8px}
+.btn-sec:hover{background:#ffbf5c}
+
+footer{text-align:center;padding:18px;background:#0d1216;margin-top:20px}
+
+
+.login-container{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+.login-box{
+    background:#111;
+    padding:30px;
+    width:300px;
+    border-radius:12px;
+    box-shadow:0 0 25px rgba(255,167,38,.6);
+    text-align:center;
+}
+.login-box h2{color:#ffa726;margin-bottom:15px}
+#login-msg{color:#ff6b6b;margin-top:10px}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Proyecto Prácticas Web</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+
+<div id="login-container" class="login-container">
+    <div class="login-box">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="user" placeholder="Usuario">
+        <input type="password" id="pass" placeholder="Contraseña">
+        <button onclick="login()">Entrar</button>
+        <p id="login-msg"></p>
+    </div>
+</div>
+
+<header>
+    <h1>PRÁCTICAS DE PROGRAMACIÓN WEB</h1>
+    <p class="sub">Diego Eduardo Ruiz Abreu</p>
+</header>
+
+<nav class="nav">
+    <a href="#p1">Práctica 1</a>
+    <a href="#p2">Práctica 2</a>
+    <a href="#p3">Práctica 3</a>
+    <a href="#p4">Práctica 4</a>
+    <a href="#p5">Práctica 5</a>
+    <a href="#p6">Práctica 6</a>
+    <a href="#p7">Práctica 7</a>
+    <a href="#p8">Práctica 8</a>
+    <a href="#p9">Práctica 9</a>
+    <a href="#p10">Práctica 10</a>
+    <a href="#ahorcado">Ahorcado</a>
+</nav>
+
+<main class="main">
+
+<section id="p1" class="practica">
+    <h2>Práctica 1 — 10 etiquetas HTML</h2>
+    <p>Demostración de etiquetas básicas vistas en clase.</p>
+
+    <h3>Título ejemplo</h3>
+    <p>Este es un párrafo con <strong>negritas</strong> y <em>cursiva</em>.</p>
+
+    <h4>Lista ordenada:</h4>
+    <ol>
+        <li>Inicio</li>
+        <li>Continuación</li>
+        <li>Final</li>
+    </ol>
+
+    <h4>Lista no ordenada:</h4>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <h4>Imagen:</h4>
+    <img src="https://picsum.photos/768/230" class="img-simple">
+
+    <p>Enlace: <a href="https://www.google.com" target="_blank">Google</a></p>
+</section>
+
+<section id="p2" class="practica">
+    <h2>Práctica 2 — Tabla</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Alumno</th>
+                <th>Materia</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Diego</td><td>Programación</td><td>10</td></tr>
+            <tr><td>Eduardo</td><td>HTML</td><td>9</td></tr>
+            <tr><td>Ruiz</td><td>Bases de Datos</td><td>8</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="p3" class="practica">
+    <h2>Práctica 3 — Formulario</h2>
+    <form onsubmit="alert('Enviado'); return false;">
+        <label>Nombre:</label>
+        <input type="text">
+
+        <label>Correo:</label>
+        <input type="email">
+
+        <label>Mensaje:</label>
+        <textarea rows="4"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<section id="p4" class="practica">
+    <h2>Práctica 4 — Mostrar imágenes</h2>
+
+    <figure>
+        <img src="./img/lol.png" width="100" height="70">
+        <figcaption>Imagen local</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://picsum.photos/800/300" class="img-dem">
+        <figcaption>Imagen por URL</figcaption>
+    </figure>
+</section>
+
+<section id="p5" class="practica">
+    <h2>Práctica 5 — Zoom con Hover</h2>
+
+    <div class="galeria">
+        <div class="card">
+            <img src="./img/lol.png">
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/seed/a/800/500">
+        </div>
+    </div>
+</section>
+
+<section id="p6" class="practica">
+    <h2>Práctica 6 — Botón Hover con CSS</h2>
+    <button class="btn-hv">Pasa el mouse</button>
+</section>
+
+<section id="p7" class="practica">
+    <h2>Práctica 7 — Cielo estrellado + Luna animada</h2>
+    <div class="cielo">
+        <div class="luna"></div>
+    </div>
+</section>
+
+<section id="p8" class="practica">
+    <h2>Práctica 8 — Reloj con JavaScript</h2>
+    <div id="reloj" class="reloj"></div>
+</section>
+
+<section id="p9" class="practica">
+    <h2>Práctica 9 — Páginas adicionales</h2>
+    <p>Enlaces a páginas creadas:</p>
+
+    <a href="pagina1.html" class="btn-sec">Página 1 – Nieve</a>
+    <a href="pagina2.html" class="btn-sec">Página 2 – Destellos</a>
+</section>
+
+
+<section id="p10" class="practica">
+    <h2>Práctica 10 — Personalización final</h2>
+    <p>Se completó la estructura general de todas las prácticas.</p>
+</section>
+
+<section id="ahorcado" class="practica">
+    <h2>Juego del Ahorcado</h2>
+    <h3 id="display"></h3>
+    <input type="text" maxlength="1" id="letra">
+    <button onclick="adivinar()">Probar</button>
+    <p>Intentos restantes: <span id="intentos"></span></p>
+</section>
+
+</main>
+
+<footer>
+    Proyecto Web — Seminario
+</footer>
+
+</body>
+</html>

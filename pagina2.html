@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 2</title>
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            background:black;
+            overflow:hidden;
+        }
+        canvas{
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+        .volver{
+            position:fixed;
+            top:20px;
+            left:20px;
+            background:#ffa726;
+            padding:10px;
+            color:black;
+            text-decoration:none;
+            border-radius:6px;
+            z-index:1000;
+        }
+    </style>
+</head>
+<body>
+
+<a href="actividad_1.html" class="volver">⬅ Volver</a>
+<canvas id="canvas"></canvas>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+class Destello{
+    constructor(){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.life = 100;
+    }
+    draw(){
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = "white";
+        ctx.fill();
+    }
+    update(){
+        this.life--;
+        this.size *= 0.98;
+    }
+}
+
+let destellos = [];
+
+function animar(){
+    ctx.fillStyle = "rgba(0,0,0,0.2)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    if(Math.random()<0.3) destellos.push(new Destello());
+    destellos.forEach((d,i)=>{
+        d.draw(); d.update();
+        if(d.life<=0) destellos.splice(i,1);
+    });
+    requestAnimationFrame(animar);
+}
+animar();
+</script>
+
+</body>
+</html>
